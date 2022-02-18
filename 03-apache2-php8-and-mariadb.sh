@@ -54,7 +54,7 @@ mysqladmin -uroot refresh
 ## copy apache2 and other config html files and other program 
 /bin/cp -pR files/web-rootdir/* /
 
-
+apt-get install -y rsyslog-mysql
 
 ## for PHP composer package
 #echo "installing php composer"
