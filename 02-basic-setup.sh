@@ -82,6 +82,9 @@ apt-get install chrony -y 2>/dev/null 1>/dev/null
 ## -x option added to allow in LXC
 echo 'DAEMON_OPTS="-F 1 -x "' >  /etc/default/chrony 
 systemctl restart chrony 
+
+## set to India IST timezone
+timedatectl set-timezone 'Asia/Kolkata'
 systemctl restart rsyslog 
 
 ##files/extra-files/etc-config-backup.sh
