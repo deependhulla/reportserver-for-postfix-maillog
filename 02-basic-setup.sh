@@ -74,7 +74,7 @@ echo "iptables-persistent iptables-persistent/autosave_v6 boolean true" | debcon
 ## postfix for basic use as default MTA and install build tool for any complication 
 ## iptables is still usefull and other addon tools 
 ## build-essential ...at time needed for any code make..or kernel driver...you can skip it if needed
-apt-get -y install postfix iptables-persistent libimage-exiftool-perl build-essential gnupg2 zip rar unrar ftp poppler-utils tnef sudo whois
+apt-get -y install postfix iptables-persistent libimage-exiftool-perl build-essential gnupg2 zip rar unrar ftp poppler-utils tnef sudo whois libauthen-pam-perl libio-pty-perl libnet-ssleay-perl perl-openssl-defaults 
 
 ## install insstead of systemd-timesyncd for better time sync
 apt-get install chrony -y 2>/dev/null 1>/dev/null
@@ -83,5 +83,6 @@ echo 'DAEMON_OPTS="-F 1 -x "' >  /etc/default/chrony
 systemctl restart chrony 
 systemctl restart rsyslog 
 
-files/extra-files/etc-config-backup.sh
+##files/extra-files/etc-config-backup.sh
+
 echo " Please Logout and login again so that bashrc is reloaded for you"
